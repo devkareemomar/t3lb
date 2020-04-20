@@ -4,8 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-9 m-auto">
-            {!! setting("story.$lang") !!}
-
+            {!! setting("about.$lang") !!}
         </div>
     </div>
 </div>

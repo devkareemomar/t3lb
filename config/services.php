@@ -33,5 +33,14 @@ return [
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],
-
+    'facebook' => [
+        'client_id' =>'870116973437762',
+        'client_secret' =>'041473d520ae1e96f166c33fae220897',
+        'redirect' =>'http://t3lab-eg.com/ar/callback',
+    ],
+      'twitter' => [
+        'client_id' =>'870116973437762',
+        'client_secret' =>'041473d520ae1e96f166c33fae220897',
+        'redirect' =>'http://t3lab-eg.com/ar/callback',
+      ],
 ];

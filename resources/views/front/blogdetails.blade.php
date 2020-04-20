@@ -1,196 +1,123 @@
 @extends('front.layout')
 @section('content')
-   <!--Start Content-->
-	<div class="content">
+  <!-- Start main-content -->
+  <div class="main-content">
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="{{asset('storage/img/bg6.jpg')}}">
+      <div class="container pt-90 pb-50">
+        <!-- Section Content -->
+        <div class="section-content pt-100">
+          <div class="row"> 
+            <div class="col-md-12">
+            <h3 class="title text text-white">{{ $Firstoffers->getTranslatedAttribute('service_name',$lang) }} </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<div class="news-posts">
-			<div class="container">
-				<div class="row">
+    <!-- Section: Blog -->
+    <section>
+      <div class="container mt-30 mb-30 pt-30 pb-30">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="blog-posts single-post">
+              <article class="post clearfix mb-0">
+                <div class="entry-header">
+                  {{-- {{$images=$Firstoffers->service_img}} --}}
+                  {{-- {{ $Firstoffers->service_img == 'array'}} --}}
 
-					<div class="col-md-12">
+                  {{-- @php $Firstoffers->service_img[] = $Firstoffers @endphp --}}
 
-							<div class="news-detail">
-								<img src="images/blog/side-bar/news-img5.jpg" alt="">
-								<div class="detail">
-                                    {!! $blogdetalis->getTranslatedAttribute('blog_content',$lang) !!}
-								</div>
-							</div>
+{{-- 
+     <div class="row">
+      <img class="img-fullwidth" alt="" src="{{asset("storage/$imag")}}">
 
-
-							<div class="share-post">
-								{{-- <h5>Share this Post!</h5> --}}
-								<a class="social-icons" href="#.">
-									<img src="images/share-post.jpg" alt="">
-								</a>
-							</div>
-
-
-							{{-- <div class="author-post">
-								<div class="author-detail">
-									<img src="images/author.jpg" alt="">
-									<div class="text">
-										<span class="name">Steven Masters</span>
-										<span class="position">Senior Chef</span>
-										<p>Aliquam ullamcorper finibus lorem ut auctor. Aliquam sed aliquet eros. Vivamus maximus dignissim mi et accumsan. Aliquam ullamcorper finibus lorem ut auctor.</p>
-									</div>
-								</div>
-							</div> --}}
-
-
-							{{-- <div class="comments-sec">
-								<h5>4 Comments</h5>
-
-								<div class="all-comments">
-
-							<div class="comment-box">
-									<img src="images/comment-img1.jpg" alt="">
-									<div class="detail">
-										<a href="#.">Reply</a>
-										<span class="name">Wahab Apple</span>
-										<span class="date">September 30, 2016 at 3:21 pm</span>
-										<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-									</div>
-
-									<div class="clear"></div>
-								</div>
-
-								<div class="comment-box">
-									<img src="images/comment-img2.jpg" alt="">
-									<div class="detail">
-										<a href="#.">Reply</a>
-										<span class="name">John Smith</span>
-										<span class="date">September 30, 2016 at 3:21 pm</span>
-										<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p>
-									</div>
-
-									<div class="clear"></div>
-								</div>
-
-
-								<div class="comment-box">
-									<img src="images/comment-img3.jpg" alt="">
-									<div class="detail">
-										<a href="#.">Reply</a>
-										<span class="name">M.Bilal</span>
-										<span class="date">September 30, 2016 at 3:21 pm</span>
-										<p>Established It is a long fact that a reader will be distracted by the readable content of at its layout. </p>
-									</div>
-
-									<div class="clear"></div>
-									<div class="comment-box reply-comment">
-									<img src="images/comment-img2.jpg" alt="">
-									<div class="detail">
-										<a href="#.">Reply</a>
-										<span class="name">John Smith</span>
-										<span class="date">September 30, 2016 at 3:21 pm</span>
-										<p>Established fact that a reader will be distracted by the readable content of a page when looking at its layout.  be distracted by the readable content when looking at its layout. </p>
-									</div>
-
-									<div class="clear"></div>
-								</div>
-
-									<div class="clear"></div>
-								</div>
-
-								</div>
-
-							</div>
-
-
-							<div class="leave-reply">
-								<h5>Leave a Reply</h5>
-
-								<div class="form">
-									<input name=" " type="text" onblur="if(this.value == '') { this.value='Your full name'}" onfocus="if (this.value == 'Your full name') {this.value=''}" value="Your full name">
-									<input name=" " type="text" onblur="if(this.value == '') { this.value='E-mail Address'}" onfocus="if (this.value == 'E-mail Address') {this.value=''}" value="E-mail Address">
-									<input name=" " type="text" class="last" onblur="if(this.value == '') { this.value='Subject'}" onfocus="if (this.value == 'Subject') {this.value=''}" value="Subject">
-									<textarea name=" " cols="1" rows="1" onblur="if(this.value == '') { this.value='Message'}" onfocus="if (this.value == 'Message') {this.value=''}" value="Message">Message</textarea>
-									<input name=" " type="submit" value="submit">
-								</div>
-							</div> --}}
+    </div>
+     --}}
 
 
 
-					</div>
-
-					{{-- <div class="col-md-4"> --}}
-
-						{{-- <div class="recent-posts">
-							<h6 class="bar-title">Recent Posts</h6>
-
-							<div class="post-sec">
-								<a href="blog-detail.html"><img src="images/blog/side-bar/recent-post1.jpg" alt=""></a>
-								<a href="blog-detail.html" class="title">Geometric Landscapes Heartologic</a>
-								<span class="date">11 Minutes ago</span>
-							</div>
-
-							<div class="post-sec">
-								<a href="blog-detail.html"><img src="images/blog/side-bar/recent-post2.jpg" alt=""></a>
-								<a href="blog-detail.html" class="title">Geometric Landscapes Heartologic</a>
-								<span class="date">2 Days ago</span>
-							</div>
-							<div class="post-sec">
-								<a href="blog-detail.html"><img src="images/blog/side-bar/recent-post3.jpg" alt=""></a>
-								<a href="blog-detail.html" class="title">Geometric Landscapes Heartologic</a>
-								<span class="date">3 months ago</span>
-							</div>
-
-						</div>
-						<div class="clear"></div>
 
 
-						<div class="categories">
-							<h6 class="bar-title">Categories</h6>
-							<ul>
-								<li><a href="#."><i class="icon-chevron-small-right"></i> Facelift</a></li>
-								<li><a href="#."><i class="icon-chevron-small-right"></i> Dental</a></li>
-								<li><a href="#."><i class="icon-chevron-small-right"></i> Tummy Tuck</a></li>
-								<li><a href="#."><i class="icon-chevron-small-right"></i> Colonoscopy</a></li>
-								<li><a href="#."><i class="icon-chevron-small-right"></i> Heart Patient</a></li>
-								<li><a href="#."><i class="icon-chevron-small-right"></i> Chin Implant</a></li>
-							</ul>
-						</div>
-						<div class="clear"></div>
 
-						<div class="tags">
-							<h6 class="bar-title">Tags</h6>
-							<div class="all-tags">
-								<a href="#.">Benefits</a>
-								<a href="#.">Kids Health </a>
-								<a href="#.">Body Lift</a>
-								<a href="#.">Trunk Liposuction</a>
-								<a href="#.">Liposuction</a>
-								<a href="#.">ill</a>
-								<a href="#.">Cardiac ablation</a>
-								<a href="#.">Clean Environment</a>
-								<a href="#.">Benefits </a>
-								<a href="#.">Kids Health </a>
-								<a href="#.">Body Lift</a>
-								<a href="#.">Trunk Liposuction</a>
-								<a href="#.">Liposuction</a>
-								<a href="#.">ill</a>
-							</div>
-						</div>
-						<div class="clear"></div>
+     
 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        @php
+        $images = json_decode($Firstoffers->service_img); 
 
-						<div class="search">
-							<input name=" " type="text" onblur="if(this.value == '') { this.value='Search here'}" onfocus="if (this.value == 'Search here') {this.value=''}" value="Search here">
-							<a href="#."><i class="icon-search2"></i></a>
-						</div> --}}
+    
+        @endphp
+        @if($images != null)
+        @foreach($images as $imag)
+        <div class="item @if($images[0] == $imag) active @endif">
+          <img src="{{asset("storage/$imag")}}" width="900px" height="900px" alt="Los Angeles">
+        </div>
+        @endforeach
+        @endif
+      </div>
+    
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    
+    
+                  {{-- @foreach($Firstoffers->service_img as $imag)  --}}
+        
+                                     
+                      
+                  
+                  {{-- <div class="post-thumb thumb"> <img src="{{asset("storage/$imag")}}" alt="" class="img-responsive img-fullwidth"> </div> --}}
+                  
+                  {{-- @endforeach --}}
+                  {{-- {{ implode(",", $Firstoffers) }} --}}
 
-					{{-- </div> --}}
-
+               
+                        
+                </div>  
+                <div class="entry-title pt-10 pl-15">
+                  <h4><a class="text-uppercase" href="#">{{ $Firstoffers->getTranslatedAttribute('service_name',$lang) }} </a></h4>
+                </div>
+                {{-- <div class="entry-meta pl-15">
+                  <ul class="list-inline">
+                    <li>Posted: <span class="text-theme-color-2"> 9/9/2015</span></li>
+                    <li>By: <span class="text-theme-color-2">Admin</span></li>
+                    <li><i class="fa fa-comments-o ml-5 mr-5"></i> 5 comments</li>
+                  </ul>
+                </div> --}}
+                <div class="entry-content mt-10">
+                  <p class="mb-15">{!! $Firstoffers->getTranslatedAttribute('service_description',$lang) !!}</p>
+                <a class="btn btn-colored btn-theme-colored hvr-grow-shadow" href="{{url("$lang/show_service/$Firstoffers->service_name")}}">{{__('home.Get_the_service')}}</a>
+					
 				</div>
-			</div>
-		</div>
+				
+			  </article>
 
-
-
-
-   </div>
-   <!--End Content-->
-
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- end main-content -->
+  
 
 
 
